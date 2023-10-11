@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ToDo List</string>
+    <string name="action_EDIT">EDIT</string>
+    <string name="action_DELETE">DELETE</string>
+    <string name="title_activity_new_edit_list">NewEditListActivity</string>
+
+</resources>
