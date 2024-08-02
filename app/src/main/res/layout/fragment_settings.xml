@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.settings.SettingsFragment">
+
+    <TextView
+        android:id="@+id/completedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:text="Completed Color"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/notCompletedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Not Completed Color"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/completedText"  />
+    <RadioGroup
+        android:id="@+id/completedColorRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/completedText"
+        app:layout_constraintTop_toTopOf="parent">
+        <RadioButton
+            android:id="@+id/greenRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green"
+            android:paddingHorizontal="4dp"
+            android:textSize="16sp" />
+        <RadioButton
+            android:id="@+id/blueRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blue"
+            android:paddingHorizontal="4dp"
+            android:textSize="16sp" />
+        <RadioButton
+            android:id="@+id/yellowRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yellow"
+            android:paddingHorizontal="4dp"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/notCompletedColorRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/notCompletedText"
+        app:layout_constraintTop_toBottomOf="@+id/completedColorRadioGroup" >
+        <RadioButton
+            android:id="@+id/brownRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brown"
+            android:textSize="16sp"
+            android:paddingHorizontal="4dp" />
+        <RadioButton
+            android:id="@+id/pinkRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pink"
+            android:textSize="16sp"
+            android:paddingHorizontal="4dp" />
+        <RadioButton
+            android:id="@+id/violetRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Violet"
+            android:textSize="16sp"
+            android:paddingHorizontal="4dp" />
+
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

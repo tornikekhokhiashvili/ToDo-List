@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/todoFragment">
+    <fragment
+        android:id="@+id/taskFragment"
+        android:name="com.example.todolist.presentation.task.TaskFragment"
+        android:label="fragment_task"
+        tools:layout="@layout/fragment_task" >
+        <argument
+            android:name="listId"
+            app:argType="long"/>
+        <argument
+            android:name="todoName"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/todoFragment"
+        android:name="com.example.todolist.presentation.todo.TodoFragment"
+        android:label="fragment_todo"
+        tools:layout="@layout/fragment_todo">
+        <action
+            android:id="@+id/action_todoFragment_to_taskFragment"
+            app:destination="@id/taskFragment" />
+        <action
+            android:id="@+id/action_todoFragment_to_settingsFragment"
+            app:destination="@+id/settingsFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.todolist.presentation.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_todoFragment"
+            app:destination="@id/todoFragment" />
+    </fragment>
+</navigation>
